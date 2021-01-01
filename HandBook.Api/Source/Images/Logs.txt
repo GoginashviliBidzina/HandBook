@@ -1,0 +1,179 @@
+2021-01-01 21:48:18.711 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-01 21:48:18.752 +04:00 [INF] Hosting environment: Development
+2021-01-01 21:48:18.755 +04:00 [INF] Content root path: C:\Users\bidzi\source\repos\HandBook\HandBook.Api
+2021-01-01 21:48:18.759 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/index.html  
+2021-01-01 21:48:18.914 +04:00 [INF] Request finished in 162.0231ms 200 text/html;charset=utf-8
+2021-01-01 21:48:19.281 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/v1/swagger.json  
+2021-01-01 21:48:19.691 +04:00 [INF] Request finished in 413.1124ms 200 application/json;charset=utf-8
+2021-01-01 21:48:36.219 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 18
+2021-01-01 21:48:36.275 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:48:36.345 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 21:48:36.740 +04:00 [INF] Executing action method HandBook.Api.Controllers.CityController.Create (HandBook.Api) - Validation state: "Valid"
+2021-01-01 21:48:47.046 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 21:48:48.000 +04:00 [INF] Executed DbCommand (137ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 21:48:50.254 +04:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = DateTimeOffset), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [City] ([CreateDate], [LastChangeDate], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [City]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-01-01 21:48:58.621 +04:00 [INF] Executed action method HandBook.Api.Controllers.CityController.Create (HandBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21871.937ms.
+2021-01-01 21:48:58.627 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 21:48:58.642 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 22289.8401ms
+2021-01-01 21:48:58.642 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:48:58.646 +04:00 [INF] Request finished in 22429.7698ms 200 application/json; charset=utf-8
+2021-01-01 21:50:51.932 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-01 21:50:51.981 +04:00 [INF] Hosting environment: Development
+2021-01-01 21:50:51.985 +04:00 [INF] Content root path: C:\Users\bidzi\source\repos\HandBook\HandBook.Api
+2021-01-01 21:50:51.983 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/index.html  
+2021-01-01 21:51:07.802 +04:00 [INF] Request finished in 15828.3426ms 200 text/html;charset=utf-8
+2021-01-01 21:51:08.119 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/v1/swagger.json  
+2021-01-01 21:51:10.619 +04:00 [INF] Request finished in 2499.7915ms 200 application/json;charset=utf-8
+2021-01-01 21:51:24.071 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 18
+2021-01-01 21:51:45.662 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:51:45.727 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 21:51:45.956 +04:00 [INF] Executing action method HandBook.Api.Controllers.CityController.Create (HandBook.Api) - Validation state: "Valid"
+2021-01-01 21:51:49.405 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 21:51:50.324 +04:00 [INF] Executed DbCommand (90ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 21:52:02.358 +04:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (DbType = DateTimeOffset), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [City] ([CreateDate], [LastChangeDate], [Name])
+VALUES (@p0, @p1, @p2);
+SELECT [Id]
+FROM [City]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2021-01-01 21:52:04.124 +04:00 [INF] Executed action method HandBook.Api.Controllers.CityController.Create (HandBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 18160.1888ms.
+2021-01-01 21:52:04.129 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 21:52:04.142 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 18406.8055ms
+2021-01-01 21:52:04.142 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:52:04.147 +04:00 [INF] Request finished in 40078.4852ms 200 application/json; charset=utf-8
+2021-01-01 21:52:53.664 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-01 21:52:53.698 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/index.html  
+2021-01-01 21:52:53.699 +04:00 [INF] Hosting environment: Development
+2021-01-01 21:52:53.701 +04:00 [INF] Content root path: C:\Users\bidzi\source\repos\HandBook\HandBook.Api
+2021-01-01 21:52:57.225 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 18
+2021-01-01 21:53:02.092 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:53:02.155 +04:00 [INF] Request finished in 8463.3995ms 200 text/html;charset=utf-8
+2021-01-01 21:53:02.210 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 21:53:05.094 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 21:53:06.034 +04:00 [INF] Executed DbCommand (68ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 21:53:06.128 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 21:53:06.143 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 3926.818ms
+2021-01-01 21:53:06.144 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:53:06.149 +04:00 [INF] Request finished in 8927.3158ms 200 application/json; charset=utf-8
+2021-01-01 21:56:00.956 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-01 21:56:00.982 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/index.html  
+2021-01-01 21:56:00.991 +04:00 [INF] Hosting environment: Development
+2021-01-01 21:56:00.991 +04:00 [INF] Content root path: C:\Users\bidzi\source\repos\HandBook\HandBook.Api
+2021-01-01 21:56:01.116 +04:00 [INF] Request finished in 140.1187ms 200 text/html;charset=utf-8
+2021-01-01 21:56:01.538 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/v1/swagger.json  
+2021-01-01 21:56:01.759 +04:00 [INF] Request finished in 221.3654ms 200 application/json;charset=utf-8
+2021-01-01 21:56:29.549 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 20
+2021-01-01 21:56:29.627 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:56:29.717 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 21:56:34.295 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 21:56:35.144 +04:00 [INF] Executed DbCommand (70ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 21:57:03.748 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 21:57:03.762 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 34036.805ms
+2021-01-01 21:57:03.762 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 21:57:03.766 +04:00 [INF] Request finished in 34220.577ms 200 application/json; charset=utf-8
+2021-01-01 22:01:18.244 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-01 22:01:18.293 +04:00 [INF] Hosting environment: Development
+2021-01-01 22:01:18.297 +04:00 [INF] Content root path: C:\Users\bidzi\source\repos\HandBook\HandBook.Api
+2021-01-01 22:01:18.296 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/index.html  
+2021-01-01 22:01:18.459 +04:00 [INF] Request finished in 171.1608ms 200 text/html;charset=utf-8
+2021-01-01 22:01:18.938 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/v1/swagger.json  
+2021-01-01 22:01:19.180 +04:00 [INF] Request finished in 242.5636ms 200 application/json;charset=utf-8
+2021-01-01 22:01:31.721 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 18
+2021-01-01 22:01:31.790 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:01:31.848 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 22:01:32.205 +04:00 [INF] Executing action method HandBook.Api.Controllers.CityController.Create (HandBook.Api) - Validation state: "Valid"
+2021-01-01 22:01:40.159 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 22:01:41.164 +04:00 [INF] Executed DbCommand (86ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 22:01:41.294 +04:00 [INF] Executed action method HandBook.Api.Controllers.CityController.Create (HandBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9076.1211ms.
+2021-01-01 22:01:41.300 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 22:01:41.313 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 9457.5528ms
+2021-01-01 22:01:41.313 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:01:41.319 +04:00 [INF] Request finished in 9600.325ms 200 application/json; charset=utf-8
+2021-01-01 22:02:44.313 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-01 22:02:44.385 +04:00 [INF] Hosting environment: Development
+2021-01-01 22:02:44.388 +04:00 [INF] Content root path: C:\Users\bidzi\source\repos\HandBook\HandBook.Api
+2021-01-01 22:02:44.384 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/index.html  
+2021-01-01 22:02:44.710 +04:00 [INF] Request finished in 335.7036ms 200 text/html;charset=utf-8
+2021-01-01 22:02:46.067 +04:00 [INF] Request starting HTTP/2.0 GET https://localhost:44322/swagger/v1/swagger.json  
+2021-01-01 22:02:46.524 +04:00 [INF] Request finished in 457.6782ms 200 application/json;charset=utf-8
+2021-01-01 22:04:08.955 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 18
+2021-01-01 22:04:09.014 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:04:09.084 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 22:04:09.463 +04:00 [INF] Executing action method HandBook.Api.Controllers.CityController.Create (HandBook.Api) - Validation state: "Valid"
+2021-01-01 22:04:13.067 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 22:04:13.917 +04:00 [INF] Executed DbCommand (78ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 22:04:14.043 +04:00 [INF] Executed action method HandBook.Api.Controllers.CityController.Create (HandBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4568.6266ms.
+2021-01-01 22:04:14.049 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 22:04:14.064 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 4972.1971ms
+2021-01-01 22:04:14.064 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:04:14.069 +04:00 [INF] Request finished in 5118.0208ms 200 application/json; charset=utf-8
+2021-01-01 22:04:20.645 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 18
+2021-01-01 22:04:20.659 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:04:20.660 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 22:04:20.689 +04:00 [INF] Executing action method HandBook.Api.Controllers.CityController.Create (HandBook.Api) - Validation state: "Valid"
+2021-01-01 22:04:25.742 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 22:04:25.772 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 22:04:31.015 +04:00 [INF] Executed action method HandBook.Api.Controllers.CityController.Create (HandBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 10326.1687ms.
+2021-01-01 22:04:31.017 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 22:04:31.019 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 10358.4419ms
+2021-01-01 22:04:31.019 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:04:31.020 +04:00 [INF] Request finished in 10375.3645ms 200 application/json; charset=utf-8
+2021-01-01 22:04:35.688 +04:00 [INF] Request starting HTTP/2.0 POST https://localhost:44322/v1/city/create application/json 19
+2021-01-01 22:04:35.689 +04:00 [INF] Executing endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:04:35.690 +04:00 [INF] Route matched with {action = "Create", controller = "City"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(HandBook.Application.Commands.City.PlaceCityCommand) on controller HandBook.Api.Controllers.CityController (HandBook.Api).
+2021-01-01 22:04:35.730 +04:00 [INF] Executing action method HandBook.Api.Controllers.CityController.Create (HandBook.Api) - Validation state: "Valid"
+2021-01-01 22:04:40.673 +04:00 [INF] Entity Framework Core 3.1.10 initialized 'DatabaseContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+2021-01-01 22:04:40.694 +04:00 [INF] Executed DbCommand (2ms) [Parameters=[@__Name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[LastChangeDate], [c].[Name]
+FROM [City] AS [c]
+WHERE [c].[Name] = @__Name_0
+2021-01-01 22:05:13.904 +04:00 [INF] Executed action method HandBook.Api.Controllers.CityController.Create (HandBook.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 38173.2544ms.
+2021-01-01 22:05:13.905 +04:00 [INF] Executing ObjectResult, writing value of type 'HandBook.Application.Infrastructure.CommandExecutionResult'.
+2021-01-01 22:05:13.908 +04:00 [INF] Executed action HandBook.Api.Controllers.CityController.Create (HandBook.Api) in 38217.0475ms
+2021-01-01 22:05:13.908 +04:00 [INF] Executed endpoint 'HandBook.Api.Controllers.CityController.Create (HandBook.Api)'
+2021-01-01 22:05:13.910 +04:00 [INF] Request finished in 38221.636ms 200 application/json; charset=utf-8
+2021-01-01 22:09:42.643 +04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: Exception of type 'System.Exception' was thrown.
+   at HandBook.Api.Controllers.CityController.Create(PlaceCityCommand command) in C:\Users\bidzi\source\repos\HandBook\HandBook.Api\Controllers\CityController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
