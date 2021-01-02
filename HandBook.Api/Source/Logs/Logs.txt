@@ -20,3 +20,33 @@ System.InvalidCastException: Unable to cast object of type 'System.DateTimeOffse
    at Microsoft.Data.SqlClient.SqlDataReader.GetDateTime(Int32 i)
    at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
    at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-01-02 22:31:31.342 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HandBook.Infrastructure.DataBase.DatabaseContext'.
+Castle.DynamicProxy.InvalidProxyConstructorArgumentsException: Can not instantiate proxy of class: HandBook.Domain.PersonManagement.RelatedPerson.
+Could not find a parameterless constructor.
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Castle.DynamicProxy.InvalidProxyConstructorArgumentsException: Can not instantiate proxy of class: HandBook.Domain.PersonManagement.RelatedPerson.
+Could not find a parameterless constructor.
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-01-02 22:31:47.963 +04:00 [ERR] An exception occurred while iterating over the results of a query for context type 'HandBook.Infrastructure.DataBase.DatabaseContext'.
+Castle.DynamicProxy.InvalidProxyConstructorArgumentsException: Can not instantiate proxy of class: HandBook.Domain.PersonManagement.RelatedPerson.
+Could not find a parameterless constructor.
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Castle.DynamicProxy.InvalidProxyConstructorArgumentsException: Can not instantiate proxy of class: HandBook.Domain.PersonManagement.RelatedPerson.
+Could not find a parameterless constructor.
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxyInstance(Type proxyType, List`1 proxyArguments, Type classToProxy, Object[] constructorArguments)
+   at Castle.DynamicProxy.ProxyGenerator.CreateClassProxy(Type classToProxy, Type[] additionalInterfacesToProxy, ProxyGenerationOptions options, Object[] constructorArguments, IInterceptor[] interceptors)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.ProxyFactory.CreateLazyLoadingProxy(IEntityType entityType, ILazyLoader loader, Object[] constructorArguments)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()

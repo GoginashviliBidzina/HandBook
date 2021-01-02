@@ -14,11 +14,12 @@ namespace HandBook.Domain.PersonManagement
 
         public RelationshipType RelationshipType { get; private set; }
 
-        public RelatedPerson()
+        public  RelatedPerson()
         {
 
         }
 
+        [JsonConstructor]
         public RelatedPerson(int personId,
                              int relatedPersonId,
                              RelationshipType relationshipType)

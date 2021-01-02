@@ -7,9 +7,6 @@ namespace HandBook.Infrastructure.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.EnsureSchema(
-                name: "HandBook");
-
             migrationBuilder.CreateTable(
                 name: "City",
                 columns: table => new
@@ -23,6 +20,29 @@ namespace HandBook.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_City", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Person",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreateDate = table.Column<DateTimeOffset>(nullable: false),
+                    LastChangeDate = table.Column<DateTimeOffset>(nullable: false),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    IdentificationNumber = table.Column<string>(nullable: true),
+                    BirthDate = table.Column<DateTime>(nullable: false),
+                    CityId = table.Column<int>(nullable: false),
+                    Photo_FilePath = table.Column<string>(nullable: true),
+                    Photo_Width = table.Column<int>(nullable: true),
+                    Photo_Height = table.Column<int>(nullable: true),
+                    Gender = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Person", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,30 +89,6 @@ namespace HandBook.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Person",
-                schema: "HandBook",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    CreateDate = table.Column<DateTimeOffset>(nullable: false),
-                    LastChangeDate = table.Column<DateTimeOffset>(nullable: false),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    IdentificationNumber = table.Column<string>(nullable: true),
-                    BirthDate = table.Column<DateTime>(nullable: false),
-                    CityId = table.Column<int>(nullable: false),
-                    Photo_FilePath = table.Column<string>(nullable: true),
-                    Photo_Width = table.Column<int>(nullable: true),
-                    Photo_Height = table.Column<int>(nullable: true),
-                    Gender = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Person", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PhoneNumber",
                 columns: table => new
                 {
@@ -108,7 +104,6 @@ namespace HandBook.Infrastructure.Migrations
                     table.ForeignKey(
                         name: "FK_PhoneNumber_Person_PersonId",
                         column: x => x.PersonId,
-                        principalSchema: "HandBook",
                         principalTable: "Person",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -121,7 +116,7 @@ namespace HandBook.Infrastructure.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PersonId = table.Column<int>(nullable: false),
-                    SecondPersonId = table.Column<int>(nullable: false),
+                    RelatedPersonId = table.Column<int>(nullable: false),
                     RelationshipType = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -130,7 +125,6 @@ namespace HandBook.Infrastructure.Migrations
                     table.ForeignKey(
                         name: "FK_RelatedPerson_Person_PersonId",
                         column: x => x.PersonId,
-                        principalSchema: "HandBook",
                         principalTable: "Person",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -165,8 +159,7 @@ namespace HandBook.Infrastructure.Migrations
                 name: "RelatedPerson");
 
             migrationBuilder.DropTable(
-                name: "Person",
-                schema: "HandBook");
+                name: "Person");
         }
     }
 }

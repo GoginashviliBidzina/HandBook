@@ -31,7 +31,7 @@ namespace HandBook.Api.Infrastructure
             if (result.ErrorCode == ErrorCode.NotFound)
                 return NotFound();
 
-            return BadRequest();
+            return BadRequest(result.ErrorCode.ToString());
         }
     }
 

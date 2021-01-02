@@ -12,6 +12,8 @@ namespace HandBook.Application.Helpers
         protected override bool IsValid(PropertyValidatorContext context)
         {
             var property = context.PropertyValue as IFormFile;
+            if (property == null)
+                return false;
 
             if ((property.ContentType.ToLower() == "image/jpeg" ||
                  property.ContentType.ToLower() == "image/jpg" ||

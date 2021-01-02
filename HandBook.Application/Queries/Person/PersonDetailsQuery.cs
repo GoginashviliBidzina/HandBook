@@ -15,34 +15,27 @@ namespace HandBook.Application.Queries.Person
 
         public async override Task<QueryExecutionResult<PersonDetailsQueryResult>> ExecuteAsync()
         {
-            try
-            {
-                var person = await _db.Set<PersonReadModel>()
+            var person = await _db.Set<PersonReadModel>()
                                       .FirstOrDefaultAsync(personReadModel => personReadModel.AggregateRootId == Id);
 
-                if (person == null)
-                    return await FailAsync(ErrorCode.NotFound);
+            if (person == null)
+                return await FailAsync(ErrorCode.NotFound);
 
-                var relatedPersons = JsonConvert.DeserializeObject<IEnumerable<RelatedPerson>>(person.RelatedPersonJson);
+            var relatedPersons = JsonConvert.DeserializeObject<IEnumerable<RelatedPerson>>(person.RelatedPersonJson);
 
-                var result = new PersonDetailsQueryResult(person.AggregateRootId,
-                                                          person.FirstName,
-                                                          person.LastName,
-                                                          person.IdentificationNumber,
-                                                          person.BirthDate,
-                                                          person.CityId,
-                                                          person.FilePath,
-                                                          person.PhotoHeight,
-                                                          person.PhotoWidth,
-                                                          person.Gender,
-                                                          relatedPersons);
+            var result = new PersonDetailsQueryResult(person.AggregateRootId,
+                                                      person.FirstName,
+                                                      person.LastName,
+                                                      person.IdentificationNumber,
+                                                      person.BirthDate,
+                                                      person.CityId,
+                                                      person.FilePath,
+                                                      person.PhotoHeight,
+                                                      person.PhotoWidth,
+                                                      person.Gender,
+                                                      relatedPersons);
 
-                return await OkAsync(result);
-            }
-            catch (Exception)
-            {
-                return await FailAsync(ErrorCode.Exception);
-            }
+            return await OkAsync(result);
         }
     }
 
@@ -100,7 +93,7 @@ namespace HandBook.Application.Queries.Person
     {
         public int PersonId { get; private set; }
 
-        public int SecondPersonId { get; private set; }
+        public int RelatedPersonId { get; private set; }
 
         public int RelationshipType { get; private set; }
 
@@ -108,11 +101,11 @@ namespace HandBook.Application.Queries.Person
         public string Relationship { get; private set; }
 
         public RelatedPerson(int personId,
-                             int secondPersonId,
+                             int relatedPersonId,
                              int relationshipType)
         {
             PersonId = personId;
-            SecondPersonId = secondPersonId;
+            RelatedPersonId = relatedPersonId;
             RelationshipType = relationshipType;
             Relationship = ((RelationshipType)relationshipType).ToString();
         }

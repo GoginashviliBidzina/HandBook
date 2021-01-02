@@ -3,7 +3,7 @@ using HandBook.Infrastructure.DataBase;
 
 namespace HandBook.Infrastructure.EventDispatching
 {
-    public interface IHandleEvent<in TEvent> where TEvent : DomainEvent
+    public interface IHandleEvent<in TEvent>
     {
         void Handle(TEvent @event, DatabaseContext db);
     }

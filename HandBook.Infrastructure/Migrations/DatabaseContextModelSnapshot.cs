@@ -73,7 +73,7 @@ namespace HandBook.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Person","HandBook");
+                    b.ToTable("Person");
                 });
 
             modelBuilder.Entity("HandBook.Domain.PersonManagement.PhoneNumber", b =>
@@ -163,10 +163,10 @@ namespace HandBook.Infrastructure.Migrations
                     b.Property<int>("PersonId")
                         .HasColumnType("int");
 
-                    b.Property<int>("RelationshipType")
+                    b.Property<int>("RelatedPersonId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SecondPersonId")
+                    b.Property<int>("RelationshipType")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

@@ -11,6 +11,7 @@ namespace HandBook.Application.Infrastructure
         {
             var result = new QueryExecutionResult<TQueryResult>
             {
+                ErrorCode = errorCode,
                 Success = false,
             };
 
