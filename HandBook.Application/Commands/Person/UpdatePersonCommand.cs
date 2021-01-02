@@ -34,23 +34,24 @@ namespace HandBook.Application.Commands.Person
 
         public async override Task<CommandExecutionResult> ExecuteAsync()
         {
-            var isIdentificationInUse = _personRepository
-                    .Query(person => person.IdentificationNumber == IdentificationNumber &&
-                                              person.Id != Id)
-                    .Any();
-
-            if (isIdentificationInUse)
-                return await FailAsync(ErrorCode.PhoneNumberInUse);
-
-            var isValidCity = _cityRepository.Query(city => city.Id == CityId).Any();
-
-            if (!isValidCity)
-                return await FailAsync(ErrorCode.CityNotFound);
-
             var person = await _personRepository.GetByIdAsync(Id);
 
             if (person == null)
                 return await FailAsync(ErrorCode.NotFound);
+
+            var duplicateIdentificationNumbers = _personRepository
+                    .Query(person => person.IdentificationNumber == IdentificationNumber &&
+                                              person.Id != Id)
+                    .Any();
+
+            if (duplicateIdentificationNumbers)
+                return await FailAsync(ErrorCode.IdentificationNumberInUse);
+
+            var city = _cityRepository.Query(city => city.Id == CityId)
+                                          .Any();
+
+            if (!city)
+                return await FailAsync(ErrorCode.CityNotFound);
 
             var photo = await _photoRepository.GetByIdAsync(PhotoId);
             var photoValueObject = new Domain.PersonManagement.ValueObjects.Photo(photo.FilePath,

@@ -18,7 +18,7 @@ namespace HandBook.Application.Commands.City
             var duplicates = _cityRepository.Query(city => city.Name == Name)
                                                      .ToList();
 
-            if (duplicates.Any())
+            if (duplicates?.Any() ?? true)
                 return await FailAsync(ErrorCode.DuplicatedCityName);
 
             await SaveAsync(city, _cityRepository);

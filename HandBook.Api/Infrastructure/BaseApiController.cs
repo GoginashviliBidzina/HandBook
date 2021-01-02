@@ -1,5 +1,5 @@
-﻿using HandBook.Application.Infrastructure;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using HandBook.Application.Infrastructure;
 
 namespace HandBook.Api.Infrastructure
 {

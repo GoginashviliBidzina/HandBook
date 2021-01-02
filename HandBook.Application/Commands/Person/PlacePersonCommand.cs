@@ -32,17 +32,16 @@ namespace HandBook.Application.Commands.Person
 
         public async override Task<CommandExecutionResult> ExecuteAsync()
         {
-            var isIdentificationInUse = _personRepository
-                    .Query(person => person.IdentificationNumber == IdentificationNumber)
-                    .Any();
+            var duplicateIdentification = _personRepository.Query(person => person.IdentificationNumber == IdentificationNumber)
+                                                               .Any();
 
-            if (isIdentificationInUse)
+            if (duplicateIdentification)
                 return await FailAsync(ErrorCode.IdentificationNumberInUse);
 
-            var isValidCity = _cityRepository.Query(city => city.Id == CityId)
-                                             .Any();
+            var city = _cityRepository.Query(city => city.Id == CityId)
+                                          .Any();
 
-            if (!isValidCity)
+            if (!city)
                 return await FailAsync(ErrorCode.CityNotFound);
 
             var photo = await _photoRepository.GetByIdAsync(PhotoId);

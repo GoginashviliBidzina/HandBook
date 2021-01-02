@@ -1,10 +1,10 @@
 ﻿using System;
 using Serilog;
 using System.Net;
+using Newtonsoft.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using HandBook.Api.Middlewares.Models;
-using Newtonsoft.Json;
 
 namespace HandBook.Api.Middlewares
 {
